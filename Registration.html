@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<style>
+    .container{
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(57, 13, 78);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form{
+        height:400px;
+        width:300px;
+        background-color: rgb(188, 136, 219);
+        color: black;
+        text-align: center;
+    }
+    input{
+        height:50px;
+        width:50%;
+        margin-bottom: 20px;
+        border: 1px solid blueviolet;
+    }
+    button{
+        height:50px;
+        width: 90%;
+        border:none;
+        background-color: darkgray;
+        color:black;
+    }
+</style>
+<body>
+        <div class="container">
+            
+        <div class="form">
+            <h2>Registration</h2>
+            <form>
+                <label>Name: </label><br>
+            
+                <input id="name" type="text"><br>
+            
+                <label>Email: </label><br>
+                
+                <input id="email" type="email"><br>
+                
+                <label>Password: </label><br>
+                
+                <input id="pass" type="password">
+            </form>
+            <button onclick="savedata()">Submit</button>
+        </div>
+    </div>
+</body>
+<script>
+    function savedata(){
+        let name=document.getElementById("name").value;
+        let mail=document.getElementById("email").value;
+        let pass=document.getElementById("pass").value;
+        if(name==""){
+            alert("please enter name");
+        }else if(mail==""){
+            alert("please enter mail id");
+        }else if(pass==""){
+            alert("please enter password");
+        }else{
+            alert("Welcome!"+name+mail+pass);
+        }
+
+    }
+</script>
+</html>
